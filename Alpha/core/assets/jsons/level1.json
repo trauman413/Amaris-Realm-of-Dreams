@@ -1,0 +1,434 @@
+{
+  "Level 1": {
+    "entrance": {
+      "x": 98.5,
+      "y": 158.5
+    },
+    "exit": {
+      "x": 1702,
+      "y": 764
+    },
+    "max_width": 1743,
+    "max_serenity": 10000,
+    "checkpoints": [
+      {
+        "id": 1,
+        "x": 748.5,
+        "y": 218
+      }
+    ],
+    "platforms": [
+      {
+        "id": 1,
+        "x": 1626,
+        "y": 646,
+        "width": 65,
+        "height": 65,
+        "x-velocity": 0,
+        "y-velocity": 0,
+        "x-bounds": 0,
+        "y-bounds": 0,
+        "type": "tile"
+      },
+      {
+        "id": 2,
+        "x": 1691,
+        "y": 646,
+        "width": 65,
+        "height": 65,
+        "x-velocity": 0,
+        "y-velocity": 0,
+        "x-bounds": 0,
+        "y-bounds": 0,
+        "type": "tile"
+      },
+      {
+        "id": 3,
+        "x": 1528.5,
+        "y": 613.5,
+        "width": 65,
+        "height": 65,
+        "x-velocity": 0,
+        "y-velocity": 0,
+        "x-bounds": 0,
+        "y-bounds": 0,
+        "type": "cloudlefttile"
+      },
+      {
+        "id": 4,
+        "x": 1593.5,
+        "y": 613.5,
+        "width": 65,
+        "height": 65,
+        "x-velocity": 0,
+        "y-velocity": 0,
+        "x-bounds": 0,
+        "y-bounds": 0,
+        "type": "cloudrighttile"
+      },
+      {
+        "id": 5,
+        "x": 1366,
+        "y": 516,
+        "width": 65,
+        "height": 65,
+        "x-velocity": 0,
+        "y-velocity": 0,
+        "x-bounds": 0,
+        "y-bounds": 0,
+        "type": "tile"
+      },
+      {
+        "id": 6,
+        "x": 1431,
+        "y": 516,
+        "width": 65,
+        "height": 65,
+        "x-velocity": 0,
+        "y-velocity": 0,
+        "x-bounds": 0,
+        "y-bounds": 0,
+        "type": "tile"
+      },
+      {
+        "id": 7,
+        "x": 878.5,
+        "y": 418.5,
+        "width": 65,
+        "height": 65,
+        "x-velocity": 0,
+        "y-velocity": 0,
+        "x-bounds": 0,
+        "y-bounds": 0,
+        "type": "cloudlefttile"
+      },
+      {
+        "id": 8,
+        "x": 943.5,
+        "y": 418.5,
+        "width": 65,
+        "height": 65,
+        "x-velocity": 0,
+        "y-velocity": 0,
+        "x-bounds": 0,
+        "y-bounds": 0,
+        "type": "cloudrighttile"
+      },
+      {
+        "id": 9,
+        "x": 1236,
+        "y": 321,
+        "width": 65,
+        "height": 65,
+        "x-velocity": 0,
+        "y-velocity": 0,
+        "x-bounds": 0,
+        "y-bounds": 0,
+        "type": "tile"
+      },
+      {
+        "id": 10,
+        "x": 1301,
+        "y": 321,
+        "width": 65,
+        "height": 65,
+        "x-velocity": 0,
+        "y-velocity": 0,
+        "x-bounds": 0,
+        "y-bounds": 0,
+        "type": "tile"
+      },
+      {
+        "id": 11,
+        "x": 911,
+        "y": 256,
+        "width": 65,
+        "height": 65,
+        "x-velocity": 0,
+        "y-velocity": 0,
+        "x-bounds": 0,
+        "y-bounds": 0,
+        "type": "tile"
+      },
+      {
+        "id": 12,
+        "x": 976,
+        "y": 256,
+        "width": 65,
+        "height": 65,
+        "x-velocity": 0,
+        "y-velocity": 0,
+        "x-bounds": 0,
+        "y-bounds": 0,
+        "type": "tile"
+      },
+      {
+        "id": 13,
+        "x": 1041,
+        "y": 256,
+        "width": 65,
+        "height": 65,
+        "x-velocity": 0,
+        "y-velocity": 0,
+        "x-bounds": 0,
+        "y-bounds": 0,
+        "type": "tile"
+      },
+      {
+        "id": 14,
+        "x": 1106,
+        "y": 256,
+        "width": 65,
+        "height": 65,
+        "x-velocity": 0,
+        "y-velocity": 0,
+        "x-bounds": 0,
+        "y-bounds": 0,
+        "type": "tile"
+      },
+      {
+        "id": 15,
+        "x": 1171,
+        "y": 256,
+        "width": 65,
+        "height": 65,
+        "x-velocity": 0,
+        "y-velocity": 0,
+        "x-bounds": 0,
+        "y-bounds": 0,
+        "type": "tile"
+      },
+      {
+        "id": 16,
+        "x": 261,
+        "y": 126,
+        "width": 65,
+        "height": 65,
+        "x-velocity": 0,
+        "y-velocity": 0,
+        "x-bounds": 0,
+        "y-bounds": 0,
+        "type": "tile"
+      },
+      {
+        "id": 17,
+        "x": 326,
+        "y": 126,
+        "width": 65,
+        "height": 65,
+        "x-velocity": 0,
+        "y-velocity": 0,
+        "x-bounds": 0,
+        "y-bounds": 0,
+        "type": "tile"
+      },
+      {
+        "id": 18,
+        "x": 391,
+        "y": 126,
+        "width": 65,
+        "height": 65,
+        "x-velocity": 0,
+        "y-velocity": 0,
+        "x-bounds": 0,
+        "y-bounds": 0,
+        "type": "tile"
+      },
+      {
+        "id": 19,
+        "x": 651,
+        "y": 126,
+        "width": 65,
+        "height": 65,
+        "x-velocity": 0,
+        "y-velocity": 0,
+        "x-bounds": 0,
+        "y-bounds": 0,
+        "type": "tile"
+      },
+      {
+        "id": 20,
+        "x": 716,
+        "y": 126,
+        "width": 65,
+        "height": 65,
+        "x-velocity": 0,
+        "y-velocity": 0,
+        "x-bounds": 0,
+        "y-bounds": 0,
+        "type": "tile"
+      },
+      {
+        "id": 21,
+        "x": 781,
+        "y": 126,
+        "width": 65,
+        "height": 65,
+        "x-velocity": 0,
+        "y-velocity": 0,
+        "x-bounds": 0,
+        "y-bounds": 0,
+        "type": "tile"
+      },
+      {
+        "id": 22,
+        "x": 1,
+        "y": 61,
+        "width": 65,
+        "height": 65,
+        "x-velocity": 0,
+        "y-velocity": 0,
+        "x-bounds": 0,
+        "y-bounds": 0,
+        "type": "tile"
+      },
+      {
+        "id": 23,
+        "x": 66,
+        "y": 61,
+        "width": 65,
+        "height": 65,
+        "x-velocity": 0,
+        "y-velocity": 0,
+        "x-bounds": 0,
+        "y-bounds": 0,
+        "type": "tile"
+      },
+      {
+        "id": 24,
+        "x": 131,
+        "y": 61,
+        "width": 65,
+        "height": 65,
+        "x-velocity": 0,
+        "y-velocity": 0,
+        "x-bounds": 0,
+        "y-bounds": 0,
+        "type": "tile"
+      },
+      {
+        "id": 25,
+        "x": 196,
+        "y": 61,
+        "width": 65,
+        "height": 65,
+        "x-velocity": 0,
+        "y-velocity": 0,
+        "x-bounds": 0,
+        "y-bounds": 0,
+        "type": "tile"
+      },
+      {
+        "id": 26,
+        "x": 456,
+        "y": 61,
+        "width": 65,
+        "height": 65,
+        "x-velocity": 0,
+        "y-velocity": 0,
+        "x-bounds": 0,
+        "y-bounds": 0,
+        "type": "tile"
+      },
+      {
+        "id": 27,
+        "x": 521,
+        "y": 61,
+        "width": 65,
+        "height": 65,
+        "x-velocity": 0,
+        "y-velocity": 0,
+        "x-bounds": 0,
+        "y-bounds": 0,
+        "type": "tile"
+      },
+      {
+        "id": 28,
+        "x": 586,
+        "y": 61,
+        "width": 65,
+        "height": 65,
+        "x-velocity": 0,
+        "y-velocity": 0,
+        "x-bounds": 0,
+        "y-bounds": 0,
+        "type": "tile"
+      }
+    ],
+    "moon-shards": [
+      {
+        "id": 1,
+        "x": 1073.5,
+        "y": 354,
+        "x-velocity": 0,
+        "y-velocity": 0,
+        "x-bounds": 0,
+        "y-bounds": 0
+      }
+    ],
+    "fountains": [
+      {
+        "id": 1,
+        "x": 1431,
+        "y": 610
+        "type": "cloud"
+      },
+      {
+        "id": 2,
+        "x": 846,
+        "y": 480
+        "type": "dash"
+      },
+      {
+        "id": 3,
+        "x": 1301,
+        "y": 415
+        "type": "flight"
+      },
+      {
+        "id": 4,
+        "x": 326,
+        "y": 220
+        "type": "flight"
+      }
+    ],
+    "obstacles": [
+      {
+        "id": 1,
+        "x": 961,
+        "y": 470,
+        "width": 65,
+        "height": 65,
+        "x-velocity": 0,
+        "y-velocity": 0,
+        "x-bounds": 0,
+        "y-bounds": 0,
+        "type": "falling_rock_tile"
+      },
+      {
+        "id": 2,
+        "x": 1026,
+        "y": 470,
+        "width": 65,
+        "height": 65,
+        "x-velocity": 0,
+        "y-velocity": 0,
+        "x-bounds": 0,
+        "y-bounds": 0,
+        "type": "falling_rock_tile"
+      },
+      {
+        "id": 3,
+        "x": 1091,
+        "y": 470,
+        "width": 65,
+        "height": 65,
+        "x-velocity": 0,
+        "y-velocity": 0,
+        "x-bounds": 0,
+        "y-bounds": 0,
+        "type": "falling_rock_tile"
+      }
+    ]
+  }
+}

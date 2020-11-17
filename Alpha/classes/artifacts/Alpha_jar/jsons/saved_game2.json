@@ -1,0 +1,75 @@
+{"levels: ": [
+{ 
+ "name": "Tutorial 1",
+ "completed": true,
+ "unlocked": true,
+ "checkpoints": 0,
+ "serenity-left": 10000,
+ "path": "jsons/tutorial1.json",
+ "ability-queue": null 
+}
+{ 
+ "name": "Tutorial 2",
+ "completed": true,
+ "unlocked": true,
+ "checkpoints": 0,
+ "serenity-left": 10000,
+ "path": "jsons/tutorial2.json",
+ "ability-queue": null 
+}
+{ 
+ "name": "Tutorial 3",
+ "completed": true,
+ "unlocked": true,
+ "checkpoints": 0,
+ "serenity-left": 10000,
+ "path": "jsons/tutorial3.json",
+ "ability-queue": null 
+}
+{ 
+ "name": "Tutorial 4",
+ "completed": true,
+ "unlocked": true,
+ "checkpoints": 0,
+ "serenity-left": 10000,
+ "path": "jsons/tutorial4.json",
+ "ability-queue": null 
+}
+{ 
+ "name": "Tutorial 5",
+ "completed": true,
+ "unlocked": true,
+ "checkpoints": 0,
+ "serenity-left": 10000,
+ "path": "jsons/tutorial5.json",
+ "ability-queue": null 
+}
+{ 
+ "name": "Level 1",
+ "completed": false,
+ "unlocked": true,
+ "checkpoints": 0,
+ "serenity-left": 10000,
+ "path": "jsons/level1.json",
+ "ability-queue": null 
+}
+{ 
+ "name": "Level 2",
+ "completed": false,
+ "unlocked": true,
+ "checkpoints": 1,
+ "serenity-left": 10000,
+ "path": "jsons/level2.json",
+ "ability-queue": null 
+}
+{ 
+ "name": "Level 3",
+ "completed": false,
+ "unlocked": true,
+ "checkpoints": 1,
+ "serenity-left": 10000,
+ "path": "jsons/level3.json",
+ "ability-queue": null 
+}
+]
+}

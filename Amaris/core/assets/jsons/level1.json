@@ -1,0 +1,301 @@
+{
+  "Tutorial 1": {
+    "background" : "ground",
+    "entrance": {
+      "x": 98.5,
+      "y": 78
+    },
+    "exit": {
+      "x": 1127,
+      "y": -21
+    },
+    "messages": [
+      {
+        "text": "Collect all moon shards and get to the end!\nPress side arrow keys to move!",
+        "text-x": 100,
+        "text-y": 200,
+        "signpost-x": 150,
+        "signpost-y": 110,
+        "image": 0
+      },
+      {
+        "text": "Press up arrow key to jump!",
+        "text-x": 700,
+        "text-y": 200,
+        "signpost-x": 760,
+        "signpost-y": 110,
+        "image": 1
+      }
+    ],
+    "max_width": 1330,
+    "max_serenity": 3000,
+    "three_star": 2000,
+    "two_star": 1000,
+    "one_star": 500,
+    "checkpoints": [],
+    "platforms": [
+      {
+        "id": 33,
+        "x": 1,
+        "y": -4,
+        "width": 65,
+        "height": 65,
+        "x-velocity": 0,
+        "y-velocity": 0,
+        "x-bounds": 0,
+        "y-bounds": 0,
+        "type": "tile"
+      },
+      {
+        "id": 34,
+        "x": 66,
+        "y": -4,
+        "width": 65,
+        "height": 65,
+        "x-velocity": 0,
+        "y-velocity": 0,
+        "x-bounds": 0,
+        "y-bounds": 0,
+        "type": "tile"
+      },
+      {
+        "id": 35,
+        "x": 131,
+        "y": -4,
+        "width": 65,
+        "height": 65,
+        "x-velocity": 0,
+        "y-velocity": 0,
+        "x-bounds": 0,
+        "y-bounds": 0,
+        "type": "tile"
+      },
+      {
+        "id": 36,
+        "x": 196,
+        "y": -4,
+        "width": 65,
+        "height": 65,
+        "x-velocity": 0,
+        "y-velocity": 0,
+        "x-bounds": 0,
+        "y-bounds": 0,
+        "type": "tile"
+      },
+      {
+        "id": 37,
+        "x": 261,
+        "y": -4,
+        "width": 65,
+        "height": 65,
+        "x-velocity": 0,
+        "y-velocity": 0,
+        "x-bounds": 0,
+        "y-bounds": 0,
+        "type": "tile"
+      },
+      {
+        "id": 38,
+        "x": 326,
+        "y": -4,
+        "width": 65,
+        "height": 65,
+        "x-velocity": 0,
+        "y-velocity": 0,
+        "x-bounds": 0,
+        "y-bounds": 0,
+        "type": "tile"
+      },
+      {
+        "id": 39,
+        "x": 551,
+        "y": -4,
+        "width": 65,
+        "height": 65,
+        "x-velocity": 0,
+        "y-velocity": 0,
+        "x-bounds": 0,
+        "y-bounds": 0,
+        "type": "tile"
+      },
+      {
+        "id": 40,
+        "x": 616,
+        "y": -4,
+        "width": 65,
+        "height": 65,
+        "x-velocity": 0,
+        "y-velocity": 0,
+        "x-bounds": 0,
+        "y-bounds": 0,
+        "type": "tile"
+      },
+      {
+        "id": 41,
+        "x": 681,
+        "y": -4,
+        "width": 65,
+        "height": 65,
+        "x-velocity": 0,
+        "y-velocity": 0,
+        "x-bounds": 0,
+        "y-bounds": 0,
+        "type": "tile"
+      },
+      {
+        "id": 42,
+        "x": 746,
+        "y": -4,
+        "width": 65,
+        "height": 65,
+        "x-velocity": 0,
+        "y-velocity": 0,
+        "x-bounds": 0,
+        "y-bounds": 0,
+        "type": "tile"
+      },
+      {
+        "id": 43,
+        "x": 811,
+        "y": -4,
+        "width": 65,
+        "height": 65,
+        "x-velocity": 0,
+        "y-velocity": 0,
+        "x-bounds": 0,
+        "y-bounds": 0,
+        "type": "tile"
+      },
+      {
+        "id": 44,
+        "x": 876,
+        "y": -4,
+        "width": 65,
+        "height": 65,
+        "x-velocity": 0,
+        "y-velocity": 0,
+        "x-bounds": 0,
+        "y-bounds": 0,
+        "type": "tile"
+      },
+      {
+        "id": 45,
+        "x": 941,
+        "y": -4,
+        "width": 65,
+        "height": 65,
+        "x-velocity": 0,
+        "y-velocity": 0,
+        "x-bounds": 0,
+        "y-bounds": 0,
+        "type": "tile"
+      },
+      {
+        "id": 46,
+        "x": 1006,
+        "y": -4,
+        "width": 65,
+        "height": 65,
+        "x-velocity": 0,
+        "y-velocity": 0,
+        "x-bounds": 0,
+        "y-bounds": 0,
+        "type": "tile"
+      },
+      {
+        "id": 47,
+        "x": 1071,
+        "y": -4,
+        "width": 65,
+        "height": 65,
+        "x-velocity": 0,
+        "y-velocity": 0,
+        "x-bounds": 0,
+        "y-bounds": 0,
+        "type": "tile"
+      },
+      {
+        "id": 48,
+        "x": 1136,
+        "y": -4,
+        "width": 65,
+        "height": 65,
+        "x-velocity": 0,
+        "y-velocity": 0,
+        "x-bounds": 0,
+        "y-bounds": 0,
+        "type": "tile"
+      },
+      {
+        "id": 49,
+        "x": 1201,
+        "y": -4,
+        "width": 65,
+        "height": 65,
+        "x-velocity": 0,
+        "y-velocity": 0,
+        "x-bounds": 0,
+        "y-bounds": 0,
+        "type": "tile"
+      },
+      {
+        "id": 49,
+        "x": 1266,
+        "y": -4,
+        "width": 65,
+        "height": 65,
+        "x-velocity": 0,
+        "y-velocity": 0,
+        "x-bounds": 0,
+        "y-bounds": 0,
+        "type": "tile"
+      },
+      {
+        "id": 50,
+        "x": 1331,
+        "y": -4,
+        "width": 65,
+        "height": 65,
+        "x-velocity": 0,
+        "y-velocity": 0,
+        "x-bounds": 0,
+        "y-bounds": 0,
+        "type": "tile"
+      },
+      {
+        "id": 51,
+        "x": 1396,
+        "y": -4,
+        "width": 65,
+        "height": 65,
+        "x-velocity": 0,
+        "y-velocity": 0,
+        "x-bounds": 0,
+        "y-bounds": 0,
+        "type": "tile"
+      }
+    ],
+    "moon-shards": [
+//      {
+//        "id": 1,
+//        "x": 358.5,
+//        "y": 78,
+//        "x-velocity": 0,
+//        "y-velocity": 0,
+//        "x-bounds": 0,
+//        "y-bounds": 0
+//      },
+      {
+        "id": 2,
+        "x": 813.5,
+        "y": 78,
+        "x-velocity": 0,
+        "y-velocity": 0,
+        "x-bounds": 0,
+        "y-bounds": 0
+      }
+    ],
+    "fountains": [],
+    "obstacles": []
+  }
+}

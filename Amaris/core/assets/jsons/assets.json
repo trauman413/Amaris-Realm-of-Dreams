@@ -1,0 +1,725 @@
+{
+  "static-images": [
+    {
+      "name": "player",
+      "path": "images/animation_idle_regular.png"
+    },
+    {
+      "name": "player_walk",
+      "path": "images/animation_regular_walk.png"
+    },
+    {
+      "name": "player_jump",
+      "path": "images/animation_regular_jump.png"
+    },
+    {
+      "name": "player_trans_walk",
+      "path": "images/animation_trans_walk.png"
+    },
+    {
+      "name": "player_trans_walk_NG",
+      "path": "images/animation_trans_walk_NG.png"
+    },
+    {
+      "name": "player_flight_walk",
+      "path": "images/animation_flight_walk.png"
+    },
+    {
+      "name": "player_flight_walk_NG",
+      "path": "images/animation_flight_walk_NG.png"
+    },
+    {
+      "name": "player_dash_walk",
+      "path": "images/animation_dash_walk.png"
+    },
+    {
+      "name": "player_dash_walk_NG",
+      "path": "images/animation_dash_walk_NG.png"
+    },
+    {
+      "name": "player_dash_jump",
+      "path": "images/animation_dash_jump.png"
+    },
+    {
+      "name": "player_dash_jump_NG",
+      "path": "images/animation_dash_jump_NG.png"
+    },
+    {
+      "name": "player_flight_jump",
+      "path": "images/animation_flight_jump.png"
+    },
+    {
+      "name": "player_flight_jump_NG",
+      "path": "images/animation_flight_jump_NG.png"
+    },
+    {
+      "name": "player_trans_jump",
+      "path": "images/animation_trans_jump.png"
+    },
+    {
+      "name": "player_trans_jump_NG",
+      "path": "images/animation_trans_jump_NG.png"
+    },
+    {
+      "name": "player_dash_glow",
+      "path": "images/animation_idle_dash.png"
+    },
+    {
+      "name": "player_flight",
+      "path": "images/animation_idle_flight.png"
+    },
+    {
+      "name": "player_flight_NG",
+      "path": "images/animation_idle_flight_NG.png"
+    },
+    {
+      "name": "player_dash",
+      "path": "images/animation_idle_dash_NG.png"
+    },
+    {
+      "name": "player_transparency",
+      "path": "images/animation_idle_trans.png"
+    },
+    {
+      "name": "player_transparency_NG",
+      "path": "images/animation_idle_trans_NG.png"
+    },
+    {
+      "name": "player_hurt",
+      "path": "images/animation_hurt.png"
+    },
+    {
+      "name": "player_flying",
+      "path": "images/animation_flying.png"
+    },
+    {
+      "name": "player_flying_NG",
+      "path": "images/animation_flying_NG.png"
+    },
+    {
+      "name": "player_dashing",
+      "path": "images/animation_dash.png"
+    },
+    {
+      "name": "player_dashing_NG",
+      "path": "images/animation_dash_NG.png"
+    },
+    {
+      "name": "background",
+      "path": "images/detailed_background.png"
+    },
+    {
+      "name": "background_with_buildings",
+      "path": "images/backgroundwbuildings.png"
+    },
+    {
+      "name": "long_background",
+      "path": "images/long_background.png"
+    },
+    {
+      "name": "ground_background",
+      "path": "images/ground_background.png"
+    },
+    {
+      "name": "cloud_background",
+      "path": "images/cloud_background.png"
+    },
+    {
+      "name": "space_background",
+      "path": "images/space_background.png"
+    },
+    {
+      "name": "smoke",
+      "path": "images/animation_smoke.png"
+    },
+    {
+      "name": "pause",
+      "path": "images/pause.png"
+    },
+    {
+      "name": "castle",
+      "path": "images/spike_castle.png"
+    },
+    {
+      "name": "cloud",
+      "path": "images/cloud_3.png"
+    },
+    {
+      "name": "rectangle",
+      "path": "images/rectangle.png"
+    },
+    {
+      "name": "cloudlefttile",
+      "path": "images/cloudlefttile.png"
+    },
+    {
+      "name": "cloudrighttile",
+      "path": "images/cloudrighttile.png"
+    },
+    {
+      "name": "window",
+      "path": "images/window.png"
+    },
+    {
+      "name": "windowbroken1",
+      "path": "images/windowBroken1.png"
+    },
+    {
+      "name": "windowbroken2",
+      "path": "images/windowBroken2.png"
+    },
+    {
+      "name": "tile",
+      "path": "images/tile.png"
+    },
+    {
+      "name": "brick_endtile",
+      "path": "images/brick_endtile.png"
+    },
+    {
+      "name": "brick_endtile2",
+      "path": "images/brick_endtile2.png"
+    },
+    {
+      "name": "brick_endtile3",
+      "path": "images/brick_endtile3.png"
+    },
+    {
+      "name": "brick_endtile4",
+      "path": "images/brick_endtile4.png"
+    },
+    {
+      "name": "goal",
+      "path": "images/stairs.png"
+    },
+    {
+      "name": "dash_icon",
+      "path": "images/dash_icon.png"
+    },
+    {
+      "name": "flight_icon",
+      "path": "images/flight_icon.png"
+    },
+    {
+      "name": "transparency_icon",
+      "path": "images/transparent_icon.png"
+    },
+    {
+      "name": "serenity_icon",
+      "path": "images/serenity_icon.png"
+    },
+    {
+      "name": "dash_fountain",
+      "path": "images/dash_fountain_animation.png"
+    },
+    {
+      "name": "flight_fountain",
+      "path": "images/flight_fountain_animation.png"
+    },
+    {
+      "name": "transparency_fountain",
+      "path": "images/cloud_fountain_animation.png"
+    },
+    {
+      "name": "restore_fountain",
+      "path": "images/serenity_fountain_animation.png"
+    },
+    {
+      "name": "moon_shard",
+      "path": "images/moon_shard.png"
+    },
+    {
+      "name": "enemy_croc",
+      "path": "images/animation_enemy_croc.png"
+    },
+    {
+      "name": "enemy_fly",
+      "path": "images/animation_flying_enemy.png"
+    },
+    {
+      "name": "falling_rock1",
+      "path": "images/falling_rock1.png"
+    },
+    {
+      "name": "falling_rock2",
+      "path": "images/falling_rock2.png"
+    },
+    {
+      "name": "falling_rock3",
+      "path": "images/falling_rock3.png"
+    },
+    {
+      "name": "falling_rock_tile",
+      "path": "images/falling_rock_tile.png"
+    },
+    {
+      "name": "serenity_empty",
+      "path": "images/serenitybar_empty.png"
+    },
+    {
+      "name": "serenity_full",
+      "path": "images/serenitybar_full.png"
+    },
+    {
+      "name": "serenity_line",
+      "path": "images/serenitybar_line.png"
+    },
+    {
+      "name": "serenity_hurt",
+      "path": "images/serenitybar_hurt.png"
+    },
+    {
+      "name": "serenity_label",
+      "path": "images/serenity_label.png"
+    },
+    {
+      "name": "ability_queue",
+      "path": "images/ability_queue.png"
+    },
+    {
+      "name": "ability_timer",
+      "path": "images/ability_timer.png"
+    },
+    {
+      "name": "levelselect_unclicked",
+      "path": "images/levelselect_unclicked.png"
+    },
+    {
+      "name": "levelselect_clicked",
+      "path": "images/levelselect_clicked.png"
+    },
+    {
+      "name": "nextlevel_unclicked",
+      "path": "images/nextlevel_unclicked.png"
+    },
+    {
+      "name": "nextlevel_clicked",
+      "path": "images/nextlevel_clicked.png"
+    },
+    {
+      "name": "1",
+      "path": "images/1.png"
+    },
+    {
+      "name": "2",
+      "path": "images/2.png"
+    },
+    {
+      "name": "3",
+      "path": "images/3.png"
+    },
+    {
+      "name": "4",
+      "path": "images/4.png"
+    },
+    {
+      "name": "5",
+      "path": "images/5.png"
+    },
+    {
+      "name": "6",
+      "path": "images/6.png"
+    },
+    {
+      "name": "7",
+      "path": "images/7.png"
+    },
+    {
+      "name": "8",
+      "path": "images/8.png"
+    },
+    {
+      "name": "9",
+      "path": "images/9.png"
+    },
+    {
+      "name": "10",
+      "path": "images/10.png"
+    },
+    {
+      "name": "11",
+      "path": "images/11.png"
+    },
+    {
+      "name": "12",
+      "path": "images/12.png"
+    },
+    {
+      "name": "13",
+      "path": "images/13.png"
+    },
+    {
+      "name": "14",
+      "path": "images/14.png"
+    },
+    {
+      "name": "available_clicked",
+      "path": "images/available_clicked.png"
+    },
+    {
+      "name": "available_unclicked",
+      "path": "images/available_unclicked.png"
+    },
+    {
+      "name": "completed_clicked",
+      "path": "images/completed_clicked.png"
+    },
+    {
+      "name": "completed_clicked_glow",
+      "path": "images/completed_clicked_glow.png"
+    },
+    {
+      "name": "completed_unclicked",
+      "path": "images/completed_unclicked.png"
+    },
+    {
+      "name": "completed_unclicked_glow",
+      "path": "images/completed_unclicked_glow.png"
+    },
+    {
+      "name": "unclickable",
+      "path": "images/unclickable.png"
+    },
+    {
+      "name": "unavailable",
+      "path": "images/unavailable.png"
+    },
+    {
+      "name": "intro_screen",
+      "path": "images/intro_screen.png"
+
+    },
+    {
+      "name": "intro_logo",
+      "path": "images/intro_logo.png"
+    },
+    {
+      "name": "intro_slide1",
+      "path": "images/intro_slide1.png"
+    },
+    {
+      "name": "intro_slide2",
+      "path": "images/intro_slide2.png"
+    },
+    {
+      "name": "intro_slide3",
+      "path": "images/intro_slide3.png"
+    },
+    {
+      "name": "intro_slide4",
+      "path": "images/intro_slide4.png"
+    },
+    {
+      "name": "intro_slide5",
+      "path": "images/intro_slide5.png"
+    },
+    {
+      "name": "intro_slide7",
+      "path": "images/intro_slide7.png"
+    },
+    {
+      "name": "intro_slide8",
+      "path": "images/intro_slide8.png"
+    },
+    {
+      "name": "intro_slide9",
+      "path": "images/intro_slide9.png"
+    },
+    {
+      "name": "ending_slide1",
+      "path": "images/ending_slide1.png"
+    },
+    {
+      "name": "ending_slide2",
+      "path": "images/ending_slide2.png"
+    },
+    {
+      "name": "ending_slide3",
+      "path": "images/ending_slide3.png"
+    },
+    {
+      "name": "ending_slide4",
+      "path": "images/ending_slide4.png"
+    },
+    {
+      "name": "ending_slide5",
+      "path": "images/ending_slide5.png"
+    },
+    {
+      "name": "win",
+      "path": "images/win_screen.png"
+    },
+    {
+      "name": "win0",
+      "path": "images/level_complete_0stars.png"
+    },
+    {
+      "name": "win1",
+      "path": "images/level_complete_1stars.png"
+    },
+    {
+      "name": "win2",
+      "path": "images/level_complete_2stars.png"
+    },
+    {
+      "name": "win3",
+      "path": "images/level_complete_3stars.png"
+    },
+    {
+      "name": "lose",
+      "path": "images/lose_screen.png"
+    },
+    {
+      "name": "vignette",
+      "path": "images/vignette.png"
+    },
+    {
+      "name": "fence",
+      "path": "images/fence.png"
+    },
+    {
+      "name": "signpost",
+      "path": "images/signpost.png"
+    },
+    {
+      "name": "signpost_unread",
+      "path": "images/signpost_unread.png"
+    },
+    {
+      "name": "sign1",
+      "path": "images/sign1.png"
+    },
+    {
+      "name": "sign2",
+      "path": "images/sign2animation.png"
+    },
+    {
+      "name": "sign3",
+      "path": "images/sign3.png"
+    },
+    {
+      "name": "sign4",
+      "path": "images/sign4animation.png"
+    },
+    {
+      "name": "sign5",
+      "path": "images/sign5.png"
+    },
+    {
+      "name": "sign6",
+      "path": "images/sign6animation.png"
+    },
+    {
+      "name": "sign7",
+      "path": "images/sign7.png"
+    },
+    {
+      "name": "sign8",
+      "path": "images/sign8animation.png"
+    },
+    {
+      "name": "pause_button",
+      "path": "images/pause_button.png"
+    },
+    {
+      "name": "pause_button_clicked",
+      "path": "images/pause_button_onclick.png"
+    },
+    {
+      "name": "play_button",
+      "path": "images/play_button.png"
+    },
+    {
+      "name": "play_button_clicked",
+      "path": "images/play_button_onclick.png"
+    },
+    {
+      "name": "map_button",
+      "path": "images/map_button.png"
+    },
+    {
+      "name": "map_button_clicked",
+      "path": "images/map_button_onclick.png"
+    },
+    {
+      "name": "back_button",
+      "path": "images/back_button.png"
+    },
+    {
+      "name": "back_button_clicked",
+      "path": "images/back_button_onclick.png"
+    },
+    {
+      "name": "skip_button",
+      "path": "images/skip_button.png"
+    },
+    {
+      "name": "skip_button_clicked",
+      "path": "images/skip_button_onclick.png"
+    },
+    {
+      "name": "mute_button",
+      "path": "images/mute_button.png"
+    },
+    {
+      "name": "mute_button_clicked",
+      "path": "images/mute_button_onclick.png"
+    },
+    {
+      "name": "mute_button_off",
+      "path": "images/mute_button_off.png"
+    },
+    {
+      "name": "moon_icon",
+      "path": "images/moon_icon.png"
+    },
+    {
+      "name": "door",
+      "path": "images/door.png"
+    },
+    {
+      "name": "lamppost",
+      "path": "images/lamppost.png"
+    },
+    {
+      "name": "lamppost_empty",
+      "path": "images/lamppost_empty.png"
+    },
+    {
+      "name": "star",
+      "path": "images/star.png"
+    },
+    {
+      "name": "resume_button",
+      "path": "images/resume_button.png"
+    },
+    {
+      "name": "resume_button_hover",
+      "path": "images/resume_hover.png"
+    },
+    {
+      "name": "resume_button_onclick",
+      "path": "images/resume_onclick.png"
+    },
+    {
+      "name": "title_button",
+      "path": "images/title_button.png"
+    },
+    {
+      "name": "title_button_hover",
+      "path": "images/title_hover.png"
+    },
+    {
+      "name": "title_button_onclick",
+      "path": "images/title_onclick.png"
+    },
+    {
+      "name": "level_select_button",
+      "path": "images/level_select_button.png"
+    },
+    {
+      "name": "level_select_button_hover",
+      "path": "images/level_select_hover.png"
+    },
+    {
+      "name": "level_select_button_onclick",
+      "path": "images/level_select_onclick.png"
+    },
+    {
+      "name": "controls_button",
+      "path": "images/controls_button.png"
+    },
+    {
+      "name": "controls_button_hover",
+      "path": "images/controls_hover.png"
+    },
+    {
+      "name": "controls_button_onclick",
+      "path": "images/controls_onclick.png"
+    },
+    {
+      "name": "controls",
+      "path": "images/controls.png"
+    },
+    {
+      "name": "main_menu",
+      "path": "images/main_menu.png"
+    },
+    {
+      "name": "load_button",
+      "path": "images/load_button.png"
+    },
+    {
+      "name": "new_button",
+      "path": "images/new_game.png"
+    },
+    {
+      "name": "load_button_onclick",
+      "path": "images/load_button_onclick.png"
+    },
+    {
+      "name": "new_button_onclick",
+      "path": "images/new_button_onclick.png"
+    }
+  ],
+  //  "film-strips": [
+  //    {
+  //      "name": "walk",
+  //      "path": "/path/to/amaris/walk.png",
+  //      "rows": 2,
+  //      "cols": 15,
+  //      "frames": 25,
+  //      "start-frame": 10
+  //    }
+  //  ],
+  //  "textures": [
+  //    {
+  //      "name": "platform_texture",
+  //      "path": "/path/to/texture/spritesheet.png",
+  //      "x": 0,
+  //      "y": 0,
+  //      "width": 100,
+  //      "height": 100
+  //    }
+  //  ],
+  "sounds": [
+    {
+      "name": "jump",
+      "path": "sounds/jump.mp3",
+      "volume": 0.5
+    },
+    {
+      "name": "flight",
+      "path": "sounds/flight.mp3",
+      "volume": 0.5
+    },
+    {
+      "name": "menu_select",
+      "path": "sounds/menu_select.mp3",
+      "volume": 0.5
+    },
+    {
+      "name": "start_level",
+      "path": "sounds/start_level.mp3",
+      "volume": 0.5
+    },
+    {
+      "name": "touch_fountain",
+      "path": "sounds/touch_fountain.mp3",
+      "volume": 0.5
+    }
+  ],
+  "fonts": [
+    {
+      "name": "MarkerFelt",
+      "path": "fonts/MarkerFelt.ttf"
+    }
+  ]
+  //  "music": [
+  //    {
+  //      "name": "credits",
+  //      "path": "/path/to/music/credits.mp3",
+  //      "volume": 0.7
+  //    }
+  //  ]
+}

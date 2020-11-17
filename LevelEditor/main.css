@@ -1,0 +1,27 @@
+.sidebuttons {
+  height: 100%;
+  width: 20;
+  position: fixed;
+  top: 0;
+  right: 0;
+  padding-top: 16px;
+}
+.sidebuttons2  {
+  height: 100%;
+  width: 20;
+  position: fixed;
+  top: 0;
+  right: 50px;
+  padding-top: 16px;
+}
+.sideinputs {
+  height: 100%;
+  width: 20;
+  top: 0;
+  right: 150px;
+  position: fixed;
+  padding-top: 16px;
+}
+button{
+  display: block;
+}

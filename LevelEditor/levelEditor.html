@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <title> Amaris: Realm of Dreams Level Editor </title>
+  <script src="https://d3js.org/d3.v5.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="main.css" media="screen" />
+</head>
+
+<body>
+  <div id="editor">
+    <h2>Level Editor</h2>
+    <svg id="canvas" width="1080" height="648">
+      <defs id='mdef'></defs>
+    </svg>
+
+    <span id="debugger"> </span>
+
+    <script>
+      let outerSvg = d3.select("svg#canvas")
+      let svg = outerSvg.append("svg")
+        .attr("class", "drawLayer")
+        .attr("width", outerSvg.attr("width"))
+        .attr("height", outerSvg.attr("height"));
+      let width = svg.attr("width");
+      let height = svg.attr("height");
+      let background = svg.append("image")
+        .attr("y", -432)
+        .attr("class", "background")
+        .attr("xlink:href", "assets/long_background.png")
+        .attr('width', 1920)
+        .attr('height', 1080);
+
+      let numXCells = 100;
+      let numYCells = 30;
+
+      var chartZoom = d3.zoom()
+        .scaleExtent([0.6, 3])
+        .translateExtent([[0, -height + 216], [1885, height]])
+        .on("zoom", chartZoomed);
+
+      outerSvg.call(chartZoom);
+
+      var gridData = gridData(numXCells, numYCells);
+      var def = svg.append('svg:defs');
+      var prevFill;
+
+      var paramsData = {};
+      function drawAsset(src) {
+
+        var params = {
+          "width": 65,
+          "height": 65,
+          "xvelocity": 0,
+          "yvelocity": 0,
+          "xbounds": 0,
+          "ybounds": 0
+        }
+
+        params.width = document.getElementById("width").value;
+        params.height = document.getElementById("height").value;
+        params.xvelocity = document.getElementById("x-velocity").value;
+        params.yvelocity = document.getElementById("y-velocity").value;
+        params.xbounds = document.getElementById("x-bound").value;
+        params.ybounds = document.getElementById("y-bound").value;
+
+        document.getElementById("width").value = "65";
+        document.getElementById("height").value = "65";
+        document.getElementById("x-velocity").value = "0";
+        document.getElementById("y-velocity").value = "0";
+        document.getElementById("x-bound").value = "0";
+        document.getElementById("y-bound").value = "0";
+
+
+        def.append('svg:pattern')
+          .attr('id', src)
+          .attr('xlink:href', src)
+          .attr('width', 50)
+          .attr('height', 50)
+          .append('svg:image')
+          .attr('class', 'assets')
+          .attr('xlink:href', src)
+          .attr('width', 65)
+          .attr('height', 65)
+          .attr("x", 0)
+          .attr("y", 0);
+
+        column.on('click', function (d) {
+          // console.log(params);
+          d3.select(this)
+            .style('fill', 'url(#' + src + ')')
+          prevFill = 'url(#' + src + ')';
+          paramsData[this.id] = params;
+          params = {
+            "width": 65,
+            "height": 65,
+            "xvelocity": 0,
+            "yvelocity": 0,
+            "xbounds": 0,
+            "ybounds": 0
+          }
+          // console.log(paramsData);
+        })
+      }
+
+
+      var idNum = 0
+
+      var row = outerSvg.selectAll(".row")
+        .data(gridData)
+        .enter().append("g")
+        .attr("class", "row");
+
+      var column = row.selectAll(".square")
+        .data(function (d) { return d; })
+        .enter().append("rect")
+        .attr("class", "square")
+        .attr("id", function (d) { idNum++; return idNum; })
+        .attr("x", function (d) { return d.x; })
+        .attr("y", function (d) { return d.y; })
+        .attr("width", function (d) { return d.width; })
+        .attr("height", function (d) { return d.height; })
+        .style("fill", "transparent")
+        //.attr("fill-opacity",0.5)
+        .style("stroke", "#222");
+
+      column.on("mouseover", function () {
+        // prevFill = d3.select(this).style("fill");
+        // d3.select(this).style("fill", "rgba(255, 255, 1, 0.3)");
+        d3.select(this).style("stroke", "red");
+        d3.select(this).style("stroke-width", 3);
+        // console.log(d3.select(this).attr("y"));
+      });
+
+      column.on("mouseout", function () {
+        // d3.select(this).style("fill", prevFill);
+        d3.select(this).style("stroke", "black");
+        d3.select(this).style("stroke-width", 1);
+      });
+
+      function chartZoomed() {
+        let transform = d3.event.transform;
+        svg.attr("transform", d3.event.transform);
+        row.attr("transform", d3.event.transform);
+        background.attr("transform", d3.event.transform);
+      }
+
+      function gridData(numX, numY) {
+        var data = new Array();
+        var xpos = 1;
+        var ypos = -svg.attr("height");
+        var cellwidth = 65;
+        var cellheight = 65;
+        var click = 0;
+
+        for (var row = 0; row < numX; row++) {
+          data.push(new Array());
+          for (var column = 0; column < numY; column++) {
+            data[row].push({
+              x: xpos,
+              y: ypos,
+              width: cellwidth,
+              height: cellheight,
+              click: click
+            })
+            xpos += cellwidth;
+          }
+          xpos = 1;
+          ypos += cellheight;
+        }
+        return data;
+      }
+
+
+      // function drawAsset(src) {
+      //   svg.on("click", function () {
+      //     var mouse = d3.mouse(this);
+      //     svg.append('image')
+      //         .attr('xlink:href', src)
+      //         .attr('width', 65)
+      //         .attr('height', 65)
+      //         .attr("x", drawinSquare(mouse[0], 72, 15))
+      //         .attr("y", drawinSquare(mouse[1], 64.8, 10))
+      //         .attr('class', 'assets')
+      //   });
+      // }
+
+      function remove() {
+        column.on('click', function (d) {
+          d3.select(this)
+            .style('fill', 'transparent')
+        });
+      }
+
+      function removeAll() {
+        column.style("fill", "transparent");
+      }
+
+      function removeElement(d) {
+        d3.event.stopPropagation();
+        d3.select(this)
+          .remove();
+      }
+
+      function createObjectToJson(gridData) {
+        let tHeight = d3.select("svg#canvas").attr("height");
+        let objectToReturn = {
+          "level1": {
+            "entrance": { "x": 0, "y": 0 },
+            "exit": { "x": 0, "y": 0 },
+            "max_serenity": 10000,
+            "checkpoints": [],
+            "platforms": [],
+            "moon-shards": [],
+            "fountains": [],
+            "obstacles": []
+          }
+        };
+        let platforms = [], checkpoints = [], moonshards = [], fountains = [], obstacles = [];
+        let pID = 1, cpID = 1, msID = 1, fID = 1, oID = 1;
+        d3.selectAll(".square").each(function (d, i) {
+          let fill = d3.select(this).style("fill").toString();
+          let paramFromID = paramsData[this.id];
+          // console.log(paramFromID);
+          if (fill != "transparent") {
+            if (fill == 'url("#assets/amaris.png")') {
+              objectToReturn.level1.entrance.x = d.x + d.width / 2.0;
+              objectToReturn.level1.entrance.y = tHeight - d.y - d.height / 2.0;
+            } else if (fill == 'url("#assets/tile.png")') {
+              objectToReturn.level1.platforms.push({
+                "id": pID,
+                "x": d.x,
+                "y": tHeight - d.y - d.height,
+                "width": Number(paramFromID.width),
+                "height": Number(paramFromID.height),
+                "x-velocity": Number(paramFromID.xvelocity),
+                "y-velocity": Number(paramFromID.yvelocity),
+                "x-bounds": Number(paramFromID.xbounds),
+                "y-bounds": Number(paramFromID.ybounds),
+                "type": "tile"
+              });
+              pID++;
+            } else if (fill == 'url("#assets/brick_endtile.png")') {
+              objectToReturn.level1.platforms.push({
+                "id": pID,
+                "x": d.x,
+                "y": tHeight - d.y - d.height,
+                "width": Number(paramFromID.width),
+                "height": Number(paramFromID.height),
+                "x-velocity": Number(paramFromID.xvelocity),
+                "y-velocity": Number(paramFromID.yvelocity),
+                "x-bounds": Number(paramFromID.xbounds),
+                "y-bounds": Number(paramFromID.ybounds),
+                "type": "brick_endtile"
+              });
+              pID++;
+            } else if (fill == 'url("#assets/brick_endtile2.png")') {
+              objectToReturn.level1.platforms.push({
+                "id": pID,
+                "x": d.x,
+                "y": tHeight - d.y - d.height,
+                "width": Number(paramFromID.width),
+                "height": Number(paramFromID.height),
+                "x-velocity": Number(paramFromID.xvelocity),
+                "y-velocity": Number(paramFromID.yvelocity),
+                "x-bounds": Number(paramFromID.xbounds),
+                "y-bounds": Number(paramFromID.ybounds),
+                "type": "brick_endtile2"
+              });
+              pID++;
+            } else if (fill == 'url("#assets/brick_endtile3.png")') {
+              objectToReturn.level1.platforms.push({
+                "id": pID,
+                "x": d.x,
+                "y": tHeight - d.y - d.height,
+                "width": Number(paramFromID.width),
+                "height": Number(paramFromID.height),
+                "x-velocity": Number(paramFromID.xvelocity),
+                "y-velocity": Number(paramFromID.yvelocity),
+                "x-bounds": Number(paramFromID.xbounds),
+                "y-bounds": Number(paramFromID.ybounds),
+                "type": "brick_endtile3"
+              });
+              pID++;
+            } else if (fill == 'url("#assets/brick_endtile4.png")') {
+              objectToReturn.level1.platforms.push({
+                "id": pID,
+                "x": d.x,
+                "y": tHeight - d.y - d.height,
+                "width": Number(paramFromID.width),
+                "height": Number(paramFromID.height),
+                "x-velocity": Number(paramFromID.xvelocity),
+                "y-velocity": Number(paramFromID.yvelocity),
+                "x-bounds": Number(paramFromID.xbounds),
+                "y-bounds": Number(paramFromID.ybounds),
+                "type": "brick_endtile4"
+              });
+              pID++;
+            } else if (fill == 'url("#assets/cloudlefttile.png")') {
+              objectToReturn.level1.platforms.push({
+                "id": pID,
+                "x": d.x + d.width / 2.0,
+                "y": tHeight - d.y - d.height / 2.0,
+                "width": Number(paramFromID.width),
+                "height": Number(paramFromID.height),
+                "x-velocity": Number(paramFromID.xvelocity),
+                "y-velocity": Number(paramFromID.yvelocity),
+                "x-bounds": Number(paramFromID.xbounds),
+                "y-bounds": Number(paramFromID.ybounds),
+                "type": "cloudlefttile"
+              });
+              pID++;
+            } else if (fill == 'url("#assets/cloudrighttile.png")') {
+              objectToReturn.level1.platforms.push({
+                "id": pID,
+                "x": d.x + d.width / 2.0,
+                "y": tHeight - d.y - d.height / 2.0,
+                "width": Number(paramFromID.width),
+                "height": Number(paramFromID.height),
+                "x-velocity": Number(paramFromID.xvelocity),
+                "y-velocity": Number(paramFromID.yvelocity),
+                "x-bounds": Number(paramFromID.xbounds),
+                "y-bounds": Number(paramFromID.ybounds),
+                "type": "cloudrighttile"
+              });
+              pID++;
+            } else if (fill == 'url("#assets/spike_castle.png")') {
+              objectToReturn.level1.platforms.push({
+                "id": pID,
+                "x": d.x + 65,
+                "y": tHeight - d.y,
+                "width": Number(paramFromID.width),
+                "height": Number(paramFromID.height),
+                "x-velocity": Number(paramFromID.xvelocity),
+                "y-velocity": Number(paramFromID.yvelocity),
+                "x-bounds": Number(paramFromID.xbounds),
+                "y-bounds": Number(paramFromID.ybounds),
+                "type": "spike_castle",
+                "direction": "UP"
+              });
+              pID++;
+            } else if (fill == 'url("#assets/window.png")') {
+              objectToReturn.level1.platforms.push({
+                "id": pID,
+                "x": d.x,
+                "y": tHeight - d.y - 65,
+                "width": Number(paramFromID.width),
+                "height": Number(paramFromID.height),
+                "x-velocity": Number(paramFromID.xvelocity),
+                "y-velocity": Number(paramFromID.yvelocity),
+                "x-bounds": Number(paramFromID.xbounds),
+                "y-bounds": Number(paramFromID.ybounds),
+                "type": "window",
+              });
+              pID++;
+            } else if (fill == 'url("#assets/stairs.png")') {
+              objectToReturn.level1.exit.x = d.x;
+              objectToReturn.level1.exit.y = tHeight - d.y - d.height / 2.0 - 10 + 25;
+            } else if (fill == 'url("#assets/enemy_croc.png")') {
+              objectToReturn.level1.obstacles.push({
+                "id": oID,
+                "x": d.x,
+                "y": tHeight - d.y - 33,
+                "width": Number(paramFromID.width),
+                "height": Number(paramFromID.height),
+                "x-velocity": Number(paramFromID.xvelocity),
+                "y-velocity": Number(paramFromID.yvelocity),
+                "x-bounds": Number(paramFromID.xbounds),
+                "y-bounds": Number(paramFromID.ybounds),
+                "type": "enemy_croc"
+              });
+              oID++;
+            } else if (fill == 'url("#assets/enemy_flying.png")') {
+              objectToReturn.level1.obstacles.push({
+                "id": oID,
+                "x": d.x,
+                "y": tHeight - d.y - 33,
+                "width": Number(paramFromID.width),
+                "height": Number(paramFromID.height),
+                "x-velocity": Number(paramFromID.xvelocity),
+                "y-velocity": Number(paramFromID.yvelocity),
+                "x-bounds": Number(paramFromID.xbounds),
+                "y-bounds": Number(paramFromID.ybounds),
+                "type": "enemy_flying"
+              });
+              oID++;
+            } else if (fill == 'url("#assets/falling_rock_tile.png")') {
+              objectToReturn.level1.obstacles.push({
+                "id": oID,
+                "x": d.x - 15,
+                "y": tHeight - d.y - d.height,
+                "width": Number(paramFromID.width),
+                "height": Number(paramFromID.height),
+                "x-velocity": Number(paramFromID.xvelocity),
+                "y-velocity": Number(paramFromID.yvelocity),
+                "x-bounds": Number(paramFromID.xbounds),
+                "y-bounds": Number(paramFromID.ybounds),
+                "type": "falling_rock_tile"
+              });
+              oID++;
+            } else if (fill == 'url("#assets/dash_fountain.png")') {
+              objectToReturn.level1.fountains.push({
+                "id": fID,
+                "x": d.x,
+                "y": tHeight - d.y - d.height / 2.0,
+                "type": "dash"
+              });
+              fID++;
+            } else if (fill == 'url("#assets/flight_fountain.png")') {
+              objectToReturn.level1.fountains.push({
+                "id": fID,
+                "x": d.x,
+                "y": tHeight - d.y - d.height / 2.0,
+                "type": "flight"
+              });
+              fID++;
+            } else if (fill == 'url("#assets/cloud_fountain.png")') {
+              objectToReturn.level1.fountains.push({
+                "id": fID,
+                "x": d.x,
+                "y": tHeight - d.y - d.height / 2.0,
+                "type": "cloud"
+              });
+              fID++;
+            } else if (fill == 'url("#assets/serenity_fountain.png")') {
+              objectToReturn.level1.checkpoints.push({
+                "id": cpID,
+                "x": d.x - d.width / 2.0,
+                "y": tHeight - d.y - d.height / 2.0,
+              });
+              cpID++;
+            } else if (fill == 'url("#assets/moon_shard.png")') {
+              objectToReturn.level1["moon-shards"].push({
+                "id": msID,
+                "x": d.x + d.width / 2.0,
+                "y": tHeight - d.y - d.height + 33,
+                "x-velocity": Number(paramFromID.xvelocity),
+                "y-velocity": Number(paramFromID.yvelocity),
+                "x-bounds": Number(paramFromID.xbounds),
+                "y-bounds": Number(paramFromID.ybounds)
+              });
+              msID++;
+            }
+          }
+        });
+        // console.log(objectToReturn);
+        return objectToReturn;
+      }
+
+      function isSaved() {
+        let val = JSON.stringify(createObjectToJson(gridData));
+        document.getElementById("debugger").textContent = val;
+        download("levels.json", val);
+      }
+
+      function download(filename, text) {
+        var element = document.createElement('a');
+        element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));
+        element.setAttribute('download', filename);
+
+        element.style.display = 'none';
+        document.body.appendChild(element);
+
+        element.click();
+
+        document.body.removeChild(element);
+      }
+
+      function buttonClick(_this, src, w, h) {
+        _this.style.borderColor = "red";
+        let main = _this;
+        let buttons = document.getElementsByTagName("button");
+        for (let i = 0; i < buttons.length; i++) {
+          if (buttons[i] != main) {
+            buttons[i].style.borderColor = "rgb(216, 216, 216) rgb(209, 209, 209) rgb(186, 186, 186)";
+          }
+        }
+        drawAsset(src);
+      }
+
+      function getProperties() {
+
+        column.on("click", function (d) {
+          //d3.select(this)
+          let parData = paramsData[this.id];
+
+          document.getElementById("width").value = parData.width;
+          document.getElementById("height").value = parData.height;
+          document.getElementById("x-velocity").value = parData.xvelocity;
+          document.getElementById("y-velocity").value = parData.yvelocity;
+          document.getElementById("x-bound").value = parData.xbounds;
+          document.getElementById("y-bound").value = parData.ybounds;
+        })
+      }
+
+      function updateData() {
+        column.on("click", function (d) {
+          let parData = paramsData[this.id];
+          parData.width = document.getElementById("width").value;
+          parData.height = document.getElementById("height").value;
+          parData.xvelocity = document.getElementById("x-velocity").value;
+          parData.yvelocity = document.getElementById("y-velocity").value;
+          parData.xbounds = document.getElementById("x-bound").value;
+          parData.ybounds = document.getElementById("y-bound").value;
+
+          console.log(parData);
+          paramsData[this.id] = parData;
+        })
+        console.log("hi");
+
+      }
+    </script>
+
+    <div class="sidebuttons">
+      <button type="button" onclick="buttonClick(this, 'assets/amaris.png')">
+        <img src="assets/amaris.png" width=35 height="35" alt="amaris">
+      </button>
+      <button type="button" onclick="buttonClick(this, 'assets/tile.png')">
+        <img src="assets/tile.png" width=35 height="35" alt="tiled platform">
+      </button>
+      <button type="button" onclick="buttonClick(this, 'assets/brick_endtile.png')">
+        <img src="assets/brick_endtile.png" width=35 height="35" alt="endtile1">
+      </button>
+      <button type="button" onclick="buttonClick(this, 'assets/brick_endtile2.png')">
+        <img src="assets/brick_endtile2.png" width=35 height="35" alt="endtile2">
+      </button>
+      <button type="button" onclick="buttonClick(this, 'assets/brick_endtile3.png')">
+        <img src="assets/brick_endtile3.png" width=35 height="35" alt="endtile3">
+      </button>
+      <button type="button" onclick="buttonClick(this, 'assets/brick_endtile4.png')">
+        <img src="assets/brick_endtile4.png" width=35 height="35" alt="endtile4">
+      </button>
+      <button type="button" onclick="buttonClick(this, 'assets/falling_rock_tile.png')">
+        <img src="assets/falling_rock_tile.png" width=35 height="35" alt="shard">
+      </button>
+      <button type="button" onclick="buttonClick(this, 'assets/cloudlefttile.png')">
+        <img src="assets/cloudlefttile.png" width=35 height="35" alt="cloud left">
+      </button>
+      <button type="button" onclick="buttonClick(this, 'assets/cloudrighttile.png')">
+        <img src="assets/cloudrighttile.png" width=35 height="35" alt="cloud right">
+      </button>
+      <button type="button" onclick="buttonClick(this, 'assets/spike_castle.png')">
+        <img src="assets/spike_castle.png" width=35 height="35" alt="spike platform">
+      </button>
+      <button type="button" onclick="buttonClick(this, 'assets/stairs.png')">
+        <img src="assets/stairs.png" width=35 height="35" alt="stairs">
+      </button>
+      <button type="button" onclick="buttonClick(this, 'assets/window.png')">
+        <img src="assets/window.png" width=35 height="35" alt="window">
+      </button>
+      <button type="button" onclick="buttonClick(this, 'assets/dash_fountain.png')">
+        <img src="assets/dash_fountain.png" width=35 height="35" alt="dash">
+      </button>
+      <button type="button" onclick="buttonClick(this, 'assets/flight_fountain.png')">
+        <img src="assets/flight_fountain.png" width=35 height="35" alt="flight">
+      </button>
+      <button type="button" onclick="buttonClick(this, 'assets/cloud_fountain.png')">
+        <img src="assets/cloud_fountain.png" width=35 height="35" alt="cloud">
+      </button>
+      <button type="button" onclick="buttonClick(this, 'assets/serenity_fountain.png')">
+        <img src="assets/serenity_fountain.png" width=35 height="35" alt="serenity">
+      </button>
+    </div>
+    <div class="sidebuttons2">
+      <button type="button" onclick="buttonClick(this, 'assets/moon_shard.png')">
+        <img src="assets/moon_shard.png" width=35 height="35" alt="shard">
+      </button>
+      <button type="button" onclick="buttonClick(this, 'assets/enemy_flying.png')">
+        <img src="assets/enemy_flying.png" width=35 height="35" alt="shard">
+      </button>
+      <button type="button" onclick="buttonClick(this, 'assets/enemy_croc.png')">
+        <img src="assets/enemy_croc.png" width=35 height="35" alt="shard">
+      </button>
+      <button type="button" onclick="isSaved()">save</button>
+      <button type="button" onclick="remove()">delete</button>
+<!--      <button type="button" onclick="removeAll()">clear</button>-->
+      <button type="button" onclick="getProperties()">properties</button>
+    </div>
+    <div class="sideinputs">
+      <form name="params">
+        Width:
+        <br>
+        <input type="text" id="width" value="">
+        <br> Height:
+        <br>
+        <input type="text" id="height" value="">
+        <br> x-velocity:
+        <br>
+        <input type="text" id="x-velocity" value="">
+        <br> y-velocity:
+        <br>
+        <input type="text" id="y-velocity" value="">
+        <br> x-bound:
+        <br>
+        <input type="text" id="x-bound" value="">
+        <br> y-bound:
+        <br>
+        <input type="text" id="y-bound" value="">
+        <br>
+        <br>
+        <button type="button" onclick="updateData()">Update</button>
+      </form>
+    </div>
+  </div>
+</body>
+
+</html>

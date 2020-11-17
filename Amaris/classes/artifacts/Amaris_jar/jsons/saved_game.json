@@ -1,0 +1,143 @@
+{"levels": [
+{
+ "name": "Level 1",
+ "completed": false,
+ "unlocked": true,
+ "checkpoints": 0,
+ "serenity-left": 2607,
+ "path": "jsons/level1.json",
+ "ability-queue": [],
+ "num-stars": 0
+},
+{
+ "name": "Level 2",
+ "completed": false,
+ "unlocked": true,
+ "checkpoints": 0,
+ "serenity-left": 2576,
+ "path": "jsons/level2.json",
+ "ability-queue": null,
+ "num-stars": 0
+},
+{
+ "name": "Level 3",
+ "completed": false,
+ "unlocked": true,
+ "checkpoints": 0,
+ "serenity-left": 2522,
+ "path": "jsons/level3.json",
+ "ability-queue": [],
+ "num-stars": 0
+},
+{
+ "name": "Level 4",
+ "completed": false,
+ "unlocked": true,
+ "checkpoints": 0,
+ "serenity-left": 2447,
+ "path": "jsons/level4.json",
+ "ability-queue": null,
+ "num-stars": 0
+},
+{
+ "name": "Level 5",
+ "completed": false,
+ "unlocked": true,
+ "checkpoints": 3,
+ "serenity-left": 1006,
+ "path": "jsons/level5.json",
+ "ability-queue": null,
+ "num-stars": 0
+},
+{
+ "name": "Level 6",
+ "completed": false,
+ "unlocked": true,
+ "checkpoints": 0,
+ "serenity-left": 2338,
+ "path": "jsons/level6.json",
+ "ability-queue": null,
+ "num-stars": 0
+},
+{
+ "name": "Level 7",
+ "completed": false,
+ "unlocked": true,
+ "checkpoints": 0,
+ "serenity-left": 3639,
+ "path": "jsons/level7.json",
+ "ability-queue": null,
+ "num-stars": 0
+},
+{
+ "name": "Level 8",
+ "completed": false,
+ "unlocked": true,
+ "checkpoints": 0,
+ "serenity-left": 0,
+ "path": "jsons/level8.json",
+ "ability-queue": null,
+ "num-stars": 0
+},
+{
+ "name": "Level 9",
+ "completed": false,
+ "unlocked": true,
+ "checkpoints": 0,
+ "serenity-left": 0,
+ "path": "jsons/level9.json",
+ "ability-queue": null,
+ "num-stars": 0
+},
+{
+ "name": "Level 10",
+ "completed": false,
+ "unlocked": true,
+ "checkpoints": 8,
+ "serenity-left": 4556,
+ "path": "jsons/level10.json",
+ "ability-queue": null,
+ "num-stars": 0
+},
+{
+ "name": "Level 11",
+ "completed": false,
+ "unlocked": true,
+ "checkpoints": 14,
+ "serenity-left": 2124,
+ "path": "jsons/level11.json",
+ "ability-queue": null,
+ "num-stars": 0
+},
+{
+ "name": "Level 12",
+ "completed": false,
+ "unlocked": true,
+ "checkpoints": 0,
+ "serenity-left": 213,
+ "path": "jsons/level12.json",
+ "ability-queue": null,
+ "num-stars": 0
+},
+{
+ "name": "Level 13",
+ "completed": false,
+ "unlocked": true,
+ "checkpoints": 0,
+ "serenity-left": 0,
+ "path": "jsons/level13.json",
+ "ability-queue": null,
+ "num-stars": 0
+},
+{
+ "name": "Level 14",
+ "completed": false,
+ "unlocked": true,
+ "checkpoints": 0,
+ "serenity-left": 2400,
+ "path": "jsons/level14.json",
+ "ability-queue": null,
+ "num-stars": 0
+},
+]
+}

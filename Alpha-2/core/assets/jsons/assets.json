@@ -1,0 +1,200 @@
+{
+  "static-images": [
+    {
+      "name": "player",
+      "path": "images/player.png"
+    },
+    {
+      "name": "player_flight",
+      "path": "images/player_flight.png"
+    },
+    {
+      "name": "player_dash",
+      "path": "images/player_dash.png"
+    },
+    {
+      "name": "player_transparency",
+      "path": "images/player_transp.png"
+    },
+    {
+      "name": "player_hurt",
+      "path": "images/player_hurt.png"
+    },
+    {
+      "name": "background",
+      "path": "images/detailed_background.png"
+    },
+    {
+      "name": "background_with_buildings",
+      "path": "images/backgroundwbuildings.png"
+    },
+    {
+      "name": "long_background",
+      "path": "images/long_background.png"
+    },
+    {
+      "name": "pause",
+      "path": "images/pause.png"
+    },
+    {
+      "name": "castle",
+      "path": "images/spike_castle.png"
+    },
+    {
+      "name": "cloud",
+      "path": "images/cloud_platform.png"
+    },
+    {
+      "name": "cloudlefttile",
+      "path": "images/cloudlefttile.png"
+    },
+    {
+      "name": "cloudrighttile",
+      "path": "images/cloudrighttile.png"
+    },
+    {
+      "name": "window",
+      "path": "images/window.png"
+    },
+    {
+      "name": "tile",
+      "path": "images/tile.png"
+    },
+    {
+      "name": "brick_endtile",
+      "path": "images/brick_endtile.png"
+    },
+    {
+      "name": "brick_endtile2",
+      "path": "images/brick_endtile2.png"
+    },
+    {
+      "name": "brick_endtile3",
+      "path": "images/brick_endtile3.png"
+    },
+    {
+      "name": "brick_endtile4",
+      "path": "images/brick_endtile4.png"
+    },
+    {
+      "name": "goal",
+      "path": "images/stairs.png"
+    },
+    {
+      "name": "dash_icon",
+      "path": "images/dash_icon.png"
+    },
+    {
+      "name": "flight_icon",
+      "path": "images/flight_icon.png"
+    },
+    {
+      "name": "transparency_icon",
+      "path": "images/transparent_icon.png"
+    },
+    {
+      "name": "dash_fountain",
+      "path": "images/dash_fountain.png"
+    },
+    {
+      "name": "flight_fountain",
+      "path": "images/flight_fountain.png"
+    },
+    {
+      "name": "transparency_fountain",
+      "path": "images/cloud_fountain.png"
+    },
+    {
+      "name": "restore_fountain",
+      "path": "images/restore_fountain.png"
+    },
+    {
+      "name": "moon_shard",
+      "path": "images/moon_shard.png"
+    },
+    {
+      "name": "enemy_croc",
+      "path": "images/enemy_croc.png"
+    },
+    {
+      "name": "enemy_fly",
+      "path": "images/enemy_fly.png"
+    },
+    {
+      "name": "falling_rock1",
+      "path": "images/falling_rock1.png"
+    },
+    {
+      "name": "falling_rock2",
+      "path": "images/falling_rock2.png"
+    },
+    {
+      "name": "falling_rock3",
+      "path": "images/falling_rock3.png"
+    },
+    {
+      "name": "falling_rock_tile",
+      "path": "images/falling_rock_tile.png"
+    }
+  ],
+//  "film-strips": [
+//    {
+//      "name": "walk",
+//      "path": "/path/to/amaris/walk.png",
+//      "rows": 2,
+//      "cols": 15,
+//      "frames": 25,
+//      "start-frame": 10
+//    }
+//  ],
+//  "textures": [
+//    {
+//      "name": "platform_texture",
+//      "path": "/path/to/texture/spritesheet.png",
+//      "x": 0,
+//      "y": 0,
+//      "width": 100,
+//      "height": 100
+//    }
+//  ],
+  "sounds": [
+    {
+      "name": "jump",
+      "path": "sounds/jump.mp3",
+      "volume": 0.5
+    },
+    {
+      "name": "flight",
+      "path": "sounds/flight.mp3",
+      "volume": 0.5
+    },
+    {
+      "name": "menu_select",
+      "path": "sounds/menu_select.mp3",
+      "volume": 0.5
+    },
+    {
+      "name": "start_level",
+      "path": "sounds/start_level.mp3",
+      "volume": 0.5
+    },
+    {
+      "name": "touch_fountain",
+      "path": "sounds/touch_fountain.mp3",
+      "volume": 0.5
+    }
+  ],
+  "fonts": [
+    {
+      "name": "MarkerFelt",
+      "path": "fonts/MarkerFelt.ttf"
+    }
+  ]
+//  "music": [
+//    {
+//      "name": "credits",
+//      "path": "/path/to/music/credits.mp3",
+//      "volume": 0.7
+//    }
+//  ]
+}

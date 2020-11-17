@@ -1,0 +1,313 @@
+{
+  "Tutorial 2": {
+    "background" : "ground",
+    "entrance": {
+      "x": 33.5,
+      "y": 93.5
+    },
+    "exit": {
+      "x": 1127,
+      "y": -21
+    },
+    "messages": [
+      {
+        "text": "Go through the dash fountain!",
+        "text-x": 150,
+        "text-y": 200,
+        "signpost-x": 150,
+        "signpost-y": 110,
+        "image": 2
+      },
+      {
+        "text": "Press Space Bar to start timer.\nDouble tap left/right key to dash.",
+        "text-x": 500,
+        "text-y": 200,
+        "signpost-x": 500,
+        "signpost-y": 110,
+        "image": 3
+      }
+      ],
+    "max_width": 1330,
+    "max_serenity": 3000,
+    "three_star": 2000,
+    "two_star": 1000,
+    "one_star": 500,
+    "checkpoints": [],
+    "platforms": [
+      {
+        "id": 1,
+        "x": 1,
+        "y": -4,
+        "width": 65,
+        "height": 65,
+        "x-velocity": 0,
+        "y-velocity": 0,
+        "x-bounds": 0,
+        "y-bounds": 0,
+        "type": "tile"
+      },
+      {
+        "id": 2,
+        "x": 66,
+        "y": -4,
+        "width": 65,
+        "height": 65,
+        "x-velocity": 0,
+        "y-velocity": 0,
+        "x-bounds": 0,
+        "y-bounds": 0,
+        "type": "tile"
+      },
+      {
+        "id": 3,
+        "x": 131,
+        "y": -4,
+        "width": 65,
+        "height": 65,
+        "x-velocity": 0,
+        "y-velocity": 0,
+        "x-bounds": 0,
+        "y-bounds": 0,
+        "type": "tile"
+      },
+      {
+        "id": 4,
+        "x": 196,
+        "y": -4,
+        "width": 65,
+        "height": 65,
+        "x-velocity": 0,
+        "y-velocity": 0,
+        "x-bounds": 0,
+        "y-bounds": 0,
+        "type": "tile"
+      },
+      {
+        "id": 5,
+        "x": 261,
+        "y": -4,
+        "width": 65,
+        "height": 65,
+        "x-velocity": 0,
+        "y-velocity": 0,
+        "x-bounds": 0,
+        "y-bounds": 0,
+        "type": "tile"
+      },
+      {
+        "id": 6,
+        "x": 326,
+        "y": -4,
+        "width": 65,
+        "height": 65,
+        "x-velocity": 0,
+        "y-velocity": 0,
+        "x-bounds": 0,
+        "y-bounds": 0,
+        "type": "tile"
+      },
+      {
+        "id": 7,
+        "x": 391,
+        "y": -4,
+        "width": 65,
+        "height": 65,
+        "x-velocity": 0,
+        "y-velocity": 0,
+        "x-bounds": 0,
+        "y-bounds": 0,
+        "type": "tile"
+      },
+      {
+        "id": 8,
+        "x": 456,
+        "y": -4,
+        "width": 65,
+        "height": 65,
+        "x-velocity": 0,
+        "y-velocity": 0,
+        "x-bounds": 0,
+        "y-bounds": 0,
+        "type": "tile"
+      },
+      {
+        "id": 9,
+        "x": 521,
+        "y": -4,
+        "width": 65,
+        "height": 65,
+        "x-velocity": 0,
+        "y-velocity": 0,
+        "x-bounds": 0,
+        "y-bounds": 0,
+        "type": "tile"
+      },
+      {
+        "id": 12,
+        "x": 931,
+        "y": -4,
+        "width": 65,
+        "height": 65,
+        "x-velocity": 0,
+        "y-velocity": 0,
+        "x-bounds": 0,
+        "y-bounds": 0,
+        "type": "tile"
+      },
+      {
+        "id": 13,
+        "x": 996,
+        "y": -4,
+        "width": 65,
+        "height": 65,
+        "x-velocity": 0,
+        "y-velocity": 0,
+        "x-bounds": 0,
+        "y-bounds": 0,
+        "type": "tile"
+      },
+      {
+        "id": 14,
+        "x": 1061,
+        "y": -4,
+        "width": 65,
+        "height": 65,
+        "x-velocity": 0,
+        "y-velocity": 0,
+        "x-bounds": 0,
+        "y-bounds": 0,
+        "type": "tile"
+      },
+      {
+        "id": 15,
+        "x": 1126,
+        "y": -4,
+        "width": 65,
+        "height": 65,
+        "x-velocity": 0,
+        "y-velocity": 0,
+        "x-bounds": 0,
+        "y-bounds": 0,
+        "type": "tile"
+      },
+      {
+        "id": 16,
+        "x": 1191,
+        "y": -4,
+        "width": 65,
+        "height": 65,
+        "x-velocity": 0,
+        "y-velocity": 0,
+        "x-bounds": 0,
+        "y-bounds": 0,
+        "type": "tile"
+      },
+      {
+        "id": 17,
+        "x": 1256,
+        "y": -4,
+        "width": 65,
+        "height": 65,
+        "x-velocity": 0,
+        "y-velocity": 0,
+        "x-bounds": 0,
+        "y-bounds": 0,
+        "type": "tile"
+      },
+      {
+        "id": 18,
+        "x": 1321,
+        "y": -4,
+        "width": 65,
+        "height": 65,
+        "x-velocity": 0,
+        "y-velocity": 0,
+        "x-bounds": 0,
+        "y-bounds": 0,
+        "type": "tile"
+      }
+    ],
+    "moon-shards": [
+      {
+        "id": 1,
+        "x": 1008.5,
+        "y": 85,
+        "x-velocity": 0,
+        "y-velocity": 0,
+        "x-bounds": 0,
+        "y-bounds": 0
+      }
+    ],
+    "fountains": [
+      {
+        "id": 1,
+        "x": 391,
+        "y": 87,
+        "type": "dash"
+      }
+    ],
+    "obstacles": [
+      {
+        "id": 1,
+        "x": 586,
+        "y": 330,
+        "width": 65,
+        "height": 65,
+        "x-velocity": 0,
+        "y-velocity": 0,
+        "x-bounds": 0,
+        "y-bounds": 0,
+        "type": "falling_rock_tile"
+      },
+      {
+        "id": 2,
+        "x": 651,
+        "y": 330,
+        "width": 65,
+        "height": 65,
+        "x-velocity": 0,
+        "y-velocity": 0,
+        "x-bounds": 0,
+        "y-bounds": 0,
+        "type": "falling_rock_tile"
+      },
+      {
+        "id": 3,
+        "x": 716 ,
+        "y": 330,
+        "width": 65,
+        "height": 65,
+        "x-velocity": 0,
+        "y-velocity": 0,
+        "x-bounds": 0,
+        "y-bounds": 0,
+        "type": "falling_rock_tile"
+      },
+      {
+        "id": 3,
+        "x": 781,
+        "y": 330,
+        "width": 65,
+        "height": 65,
+        "x-velocity": 0,
+        "y-velocity": 0,
+        "x-bounds": 0,
+        "y-bounds": 0,
+        "type": "falling_rock_tile"
+      },
+      {
+        "id": 3,
+        "x": 846,
+        "y": 330,
+        "width": 65,
+        "height": 65,
+        "x-velocity": 0,
+        "y-velocity": 0,
+        "x-bounds": 0,
+        "y-bounds": 0,
+        "type": "falling_rock_tile"
+      }
+
+    ]
+  }
+}

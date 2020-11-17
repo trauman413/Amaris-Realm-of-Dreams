@@ -1,0 +1,56 @@
+{
+  "Empty-Level": {
+    "entrance": {
+      "x": 10,
+      "y": 78
+    },
+    "exit": {
+      "x": 50,
+      "y": 330
+    },
+    "max_width": 1600,
+    "max_serenity": 10000,
+    "checkpoints": [],
+    "platforms": [
+      {
+        "id": 11,
+        "x": 1,
+        "y": -4,
+        "width": 65,
+        "height": 65,
+        "x-velocity": 0,
+        "y-velocity": 0,
+        "x-bounds": 0,
+        "y-bounds": 0,
+        "type": "tile"
+      },
+      {
+        "id": 12,
+        "x": 66,
+        "y": -4,
+        "width": 65,
+        "height": 65,
+        "x-velocity": 0,
+        "y-velocity": 0,
+        "x-bounds": 0,
+        "y-bounds": 0,
+        "type": "tile"
+      },
+      {
+        "id": 13,
+        "x": 131,
+        "y": -4,
+        "width": 65,
+        "height": 65,
+        "x-velocity": 0,
+        "y-velocity": 0,
+        "x-bounds": 0,
+        "y-bounds": 0,
+        "type": "tile"
+      }
+    ],
+    "moon-shards": [],
+    "fountains": [],
+    "obstacles": []
+  }
+}
