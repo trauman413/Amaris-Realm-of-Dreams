@@ -10,7 +10,7 @@ import com.badlogic.gdx.physics.box2d.*;
 import edu.cornell.gdiac.amaris.*;
 import edu.cornell.gdiac.amaris.obstacle.*;
 
-import javax.xml.soap.Text;
+//import javax.xml.soap.Text;
 import java.util.Timer;
 import java.util.TimerTask;
 

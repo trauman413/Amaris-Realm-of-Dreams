@@ -14,7 +14,7 @@ import edu.cornell.gdiac.amaris.objects.MoonShard;
 import edu.cornell.gdiac.amaris.objects.RegularPlatform;
 import edu.cornell.gdiac.amaris.obstacle.BoxObstacle;
 
-import javax.xml.soap.Text;
+//import javax.xml.soap.Text;
 import java.util.ArrayList;
 
 /**
