@@ -127,8 +127,8 @@ public class IntroStory implements Screen, InputProcessor, ControllerListener {
         background7= new Texture(BACKGROUND_FILE7);
         BACKGROUND_FILE8 = levelLoader.getImagePath("intro_slide8");
         background8= new Texture(BACKGROUND_FILE8);
-        BACKGROUND_FILE9 = levelLoader.getImagePath("intro_slide9");
-        background9= new Texture(BACKGROUND_FILE9);
+//        BACKGROUND_FILE9 = levelLoader.getImagePath("intro_slide9");
+//        background9= new Texture(BACKGROUND_FILE9);
         LOGO_FILE = levelLoader.getImagePath("intro_logo");
         logo= new Texture(LOGO_FILE);
         BUTTON = levelLoader.getImagePath("skip_button");
@@ -161,7 +161,7 @@ public class IntroStory implements Screen, InputProcessor, ControllerListener {
         background5.dispose();
         background7.dispose();
         background8.dispose();
-        background9.dispose();
+//        background9.dispose();
         logo.dispose();
         background1 = null;
         background2 = null;
@@ -170,7 +170,7 @@ public class IntroStory implements Screen, InputProcessor, ControllerListener {
         background5 = null;
         background7 = null;
         background8 = null;
-        background9 = null;
+//        background9 = null;
         logo= null;
 
     }
@@ -236,9 +236,9 @@ public class IntroStory implements Screen, InputProcessor, ControllerListener {
         else if(bkgndTime < 1600) {
             canvas.draw(background8, color, 0, 0, 1330, 750);
         }
-        else if(bkgndTime < 1900) {
-            canvas.draw(background9, color, 0, 0, 1330, 750);
-        }
+//        else if(bkgndTime < 1900) {
+//            canvas.draw(background9, color, 0, 0, 1330, 750);
+//        }
        canvas.end();
         canvas.beginConstantBatch();
         if (pressState == 1 || keyPressed == 1) {
