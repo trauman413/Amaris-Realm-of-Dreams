@@ -19,7 +19,7 @@ public class Level {
     public Boolean available; // if available to play
     public Boolean complete; // if completed
     public int checkpointsPassed; // # of checkpoints passed
-    public int currentSerenity; // currenty amount of serenity left
+    public int currentSerenity; // current amount of serenity left
     public float width; // width of this level
     public int numStarsCollected; // num stars player won
     public Level nextLevel; // next level

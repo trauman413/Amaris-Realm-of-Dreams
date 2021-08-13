@@ -204,11 +204,6 @@ public class InputController {
 
 	public boolean didWalk() { return walkPressed; }
 
-	//TODO: delete me
-	public boolean didDash() { return dashPressed; }
-	public boolean didFlight() { return flightPressed; }
-	public boolean didTransparency() { return transparencyPressed; }
-
 	/**
 	 * Reads the input for the player and converts the result into game logic.
 	 */

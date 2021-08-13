@@ -131,17 +131,6 @@ public class FountainModel extends BoxObstacle {
         isAvailable = true;
     }
 
-    public FountainModel(BoxObstacle bd, FountainType fountain) {
-        super(bd.getX(),bd.getY(),1, 1);
-        setBodyType(BodyDef.BodyType.StaticBody);
-        setDensity(0.0f);
-        setFriction(0.0f);
-        setRestitution(0.0f);
-        setSensor(true);
-        fountainType = fountain;
-        isAvailable = true;
-    }
-
     /**
      * Creates the alpha Body(s) for this object, adding them to the world.
      *
@@ -156,7 +145,6 @@ public class FountainModel extends BoxObstacle {
         if (!super.activatePhysics(world)) {
             return false;
         }
-
         return true;
     }
 
@@ -166,46 +154,31 @@ public class FountainModel extends BoxObstacle {
 
     public void setEmptyTexture(TextureRegion texture) { this.empty = texture; }
 
-//    /**
-//     * Draws the alpha object.
-//     *
-//     * @param canvas Drawing context
-//     */
-//    public void draw(GameCanvas canvas) {
-//        Color color = Color.WHITE;
-//        if(!isAvailable) {
-//            color = new Color(1,1,1,.5f);
-//        }
-//        //float sx = getWidth() / (texture.getRegionWidth() / drawScale.x) ;
-//        //float sy = getHeight() / (texture.getRegionHeight() / drawScale.y);
-//        canvas.draw(texture,color,origin.x,origin.y,getX()*drawScale.x,getY()*drawScale.y,getAngle(),1.0f,1.0f);    }
-
 /**
  * Draws the fountain with animation.
  *
  */
     public void draw(GameCanvas canvas) {
         Color color = Color.WHITE;
-
         if (fountainType == FountainType.RESTORE) {
             if (isAvailable) {
-                canvas.draw(texture, color, origin.x,origin.y,getX()*drawScale.x,getY()*drawScale.y+45, texture.getRegionWidth(), texture.getRegionHeight());
+                canvas.draw(texture, color, origin.x,origin.y,getX()*drawScale.x,getY()*drawScale.y+45,
+                        texture.getRegionWidth(), texture.getRegionHeight());
             } else {
-                canvas.draw(empty, color, origin.x,origin.y,getX()*drawScale.x,getY()*drawScale.y+45, empty.getRegionWidth(), empty.getRegionHeight());
-
+                canvas.draw(empty, color, origin.x,origin.y,getX()*drawScale.x,getY()*drawScale.y+45,
+                        empty.getRegionWidth(), empty.getRegionHeight());
             }
-
         } else {
-            if(!isAvailable) {
+            if (!isAvailable) {
                 color = new Color(1,1,1,.5f);
             }
-
-            elapsedTime+= Gdx.graphics.getDeltaTime();
-            TextureRegion[][] tmpFrames = TextureRegion.split(texture.getTexture(), texture.getRegionWidth()/FRAME_COLS, texture.getRegionHeight()/FRAME_COLS);
+            elapsedTime += Gdx.graphics.getDeltaTime();
+            TextureRegion[][] tmpFrames = TextureRegion.split(texture.getTexture(),
+                    texture.getRegionWidth()/FRAME_COLS, texture.getRegionHeight()/FRAME_COLS);
             int index = 0;
 
             for (int i = 0; i < FRAME_ROWS; i++) {
-                for (int j = 0; j<FRAME_COLS; j++) {
+                for (int j = 0; j < FRAME_COLS; j++) {
                     animationFrames[index++] = tmpFrames[i][j];
                 }
             }
@@ -213,9 +186,11 @@ public class FountainModel extends BoxObstacle {
             animation = new Animation(0.11f, animationFrames);
 
             TextureRegion currentFrame = animation.getKeyFrame(elapsedTime, true);
-            canvas.draw(currentFrame, color, origin.x,origin.y,getX()*drawScale.x+65,getY()*drawScale.y+93, texture.getRegionWidth()/FRAME_COLS, texture.getRegionHeight()/FRAME_COLS);
+            canvas.draw(currentFrame, color, origin.x,origin.y,getX()*drawScale.x+65,getY()*drawScale.y+93,
+                    texture.getRegionWidth()/FRAME_COLS, texture.getRegionHeight()/FRAME_COLS);
             if (isAvailable && icon != null) {
-                canvas.draw(icon, color, origin.x,origin.y,getX()*drawScale.x+100,getY()*drawScale.y+220, texture.getRegionWidth()/4.2f, texture.getRegionHeight()/4.2f);
+                canvas.draw(icon, color, origin.x,origin.y,getX()*drawScale.x+100,getY()*drawScale.y+220,
+                        texture.getRegionWidth()/4.2f, texture.getRegionHeight()/4.2f);
             }
         }
 
